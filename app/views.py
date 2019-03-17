@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-#views
+# views
 def home(request):
-	return HttpResponse('<h1> INDEX </h1>')
+    return render(request, 'home/home.html')
+
+def about(request):
+	return render(request, 'about/about.html')
