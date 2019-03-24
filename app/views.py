@@ -14,9 +14,28 @@ posts = [
 	}
 ]
 
+users = [
+	{
+		'name': 'Dima'
+	},
+	{
+		'name': 'Timur'
+	},
+	{
+		'name': 'Alex'
+	},
+	{
+		'name': 'Mor'
+	},
+	{
+		'name': 'Elad'
+	},
+]
+
 def home(request):
 	context = {
-		'posts': posts
+		'posts': posts,
+		'users': users
 	}
 	return render(request, 'home/home.html', context)
 

@@ -1,7 +1,6 @@
 {% extends "base/base.html" %}
 
 {% block content %}
-	<h1>Home page</h1>
 	<ul>
 		{% for post in posts %}
 		<article class="media content-section">
@@ -17,3 +16,16 @@
 		{% endfor %}
 	</ul>
 {% endblock content %}
+
+{% block sidebar %}
+	<div class="content-section">
+		<h3>Users</h3>
+		<p class='text-muted'>Registered users:
+		  <ul class="list-group">
+		    {% for user in users %}
+				<li class="list-group-item list-group-item-light"><a href="#">{{ user.name }}</a></li>
+			{% endfor %}
+		  </ul>
+		</p>
+	</div>
+{% endblock sidebar%}
